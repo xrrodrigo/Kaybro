@@ -67,9 +67,9 @@ const getTimeOutInput = document.getElementById('rangeInput').value * 1000;
         session_id: sessionId,
         }
 
-//https://kaybro-api.onrender.com/client
+
        console.log('payload do front', payload);
-       const response = await fetch('http://localhost:3000/client', {
+       const response = await fetch('https://kaybro-api.onrender.com/client', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
