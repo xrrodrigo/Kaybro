@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kaybro - Dispare no Chat Guru</title>
+<!-- Load Hanken Grotesk Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link rel="shortcut icon" href="./img/crownOfJesus.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+ <link rel="stylesheet" href="./style.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cinematic-black': '#131313',
+            'accent-orange': '#ff5f1f',
+            'widget-bg': '#1a1a1a',
+            'border-gray': '#2a2a2a',
+            'text-muted': '#a1a1a1',
+          },
+          fontFamily: {
+            sans: ['Hanken Grotesk', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+<style data-purpose="global-styles">
+    body {
+      background-color: #131313;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Custom scrollbar for better cinematic feel */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #131313;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body class="font-sans">
+<!-- BEGIN: HeroSection -->
+<section class="min-h-[80vh] flex flex-col items-center justify-center px-4 pt-10 pb-32 text-center" data-purpose="hero">
+<!-- Badge -->
+<div class="inline-block flex rounded-full bg-white/5 mb-12  border border-white/10 text-xs font-medium text-text-muted tracking-wider uppercase">
+      <h1 class="w-full px-4 py-2 text-nowrap">Chat Guru</h1>
+    </div>
+<!-- Main Headline -->
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 max-w-4xl">
+      Disparos de planilhas <br/>
+<span class="text-accent-orange">Com Kaybro</span>
+</h1>
+<!-- Subtitle -->
+<p class="text-lg md:text-xl text-text-muted max-w-2xl mb-12 font-medium">
+      Dispare planilhas de uma forma que você nunca viu! Com controle total. <br class="hidden md:block"/>
+      Mensagem, delay e fonte do disparo.
+    </p>
+<!-- File Upload Area (Modified from Email Input) -->
+<div class="w-full max-w-2xl" data-purpose="file-upload-container">
+<div class="relative group cursor-pointer border-2 border-dashed border-border-gray hover:border-accent-orange/50 bg-widget-bg/50 rounded-2xl p-10 transition-all duration-300">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="fileInput" type="file"/>
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-accent-orange/10 flex items-center justify-center text-accent-orange">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<p class="text-lg font-semibold">Arraste sua planilha aqui</p>
+<p class="text-sm text-text-muted">ou clique para buscar (XLSX, CSV)</p>
+</div>
+<button class="mt-2 px-8 py-3 bg-accent-orange hover:bg-accent-orange/90 text-white font-bold rounded-xl shadow-lg shadow-accent-orange/20 transition-all">
+            Comece agora
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: FeatureHighlights -->
+<section class="max-w-6xl mx-auto px-6 pb-32" data-purpose="features">
+<div class="text-center mb-16">
+<p class="text-sm font-medium text-text-muted uppercase tracking-widest mb-2">Seu disparo, suas regras!</p>
+<h2 class="text-3xl font-semibold">Defina as características do seu disparo para sua necessidade.</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Feature Card 1: Message Template -->
+<div class="bg-widget-bg border border-border-gray rounded-3xl p-8 flex flex-col gap-6"
+    data-purpose="session-config-widget">
+    <div class="flex items-center gap-4">
+        <div class="w-10 h-10 bg-accent-orange/10 flex items-center justify-center rounded-lg text-accent-orange">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M760-120q-39 0-70-22.5T647-200H440q-66 0-113-47t-47-113q0-66 47-113t113-47h80q33 0 56.5-23.5T600-600q0-33-23.5-56.5T520-680H313q-13 35-43.5 57.5T200-600q-50 0-85-35t-35-85q0-50 35-85t85-35q39 0 69.5 22.5T313-760h207q66 0 113 47t47 113q0 66-47 113t-113 47h-80q-33 0-56.5 23.5T360-360q0 33 23.5 56.5T440-280h207q13-35 43.5-57.5T760-360q50 0 85 35t35 85q0 50-35 85t-85 35ZM228.5-691.5Q240-703 240-720t-11.5-28.5Q217-760 200-760t-28.5 11.5Q160-737 160-720t11.5 28.5Q183-680 200-680t28.5-11.5Z"/></svg>
+
+        </div>
+        <h3 class="text-xl font-bold">Configuração de Sessão</h3>
+    </div>
+    <div class="space-y-4">
+        <div class="flex flex-col gap-2">
+            <label class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Session ID</label>
+            <input
+                id="sessionIdField" class="w-full bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none"
+                placeholder="Algo como: eJyVV1tzmzgU_isvsddnusu2@XrR0dr1g0UgwdPvlNAK" type="text" />
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+                <label class="lg:text-[10px] text-[.5rem] text-text-muted font-bold uppercase tracking-widest">ID Telefone (AUTOMÁTICO)</label>
+                <select
+                   id="phoneIdSelect" class="w-full opacity-40  bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none appearance-none">
+                    <option class="bg-widget-bg border border-border-gray" value="">Selecionar ID</option>
+                    <option class="bg-widget-bg border border-border-gray">68f2ab563ac00563d3d89f3b</option>
+                    <option class="bg-widget-bg border border-border-gray">68f2aa50a9adeacddcd788e7</option>
+                    <option class="bg-widget-bg border border-border-gray">68f14a80b80cdbddfbcae72a</option>
+                    <option class="bg-widget-bg border border-border-gray">68dec82104bb3a900d089d6d</option>
+               </select>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="lg:text-[10px] text-[.5rem] text-text-muted font-bold uppercase tracking-widest">ID Template (indisponível)</label>
+                <select
+                    class="w-full opacity-40 bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none appearance-none">
+                    <option class="bg-widget-bg border border-border-gray" value="">Selecionar Template</option>
+                   <!-- 
+                    <option class="bg-widget-bg border border-border-gray" value="6a1f2ea1142a270a518f962b">Template CLT</option>
+                    <option class="bg-widget-bg border border-border-gray" value="6a1f2ea1142a270a518f962b">Template CLT2</option>
+                -->
+                  </select>
+            </div>
+        </div>
+    </div>
+    <div class="text-[10px] text-text-muted font-medium uppercase tracking-tighter">Defina os parâmetros de conexão e o
+        modelo de mensagem</div>
+</div>
+
+
+<!-- Feature Card 4: Number Inputs -->
+<div class="bg-widget-bg border border-border-gray rounded-3xl p-8 flex flex-col gap-6" data-purpose="numbers-widget">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-accent-orange/10 flex items-center justify-center rounded-lg text-accent-orange">
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></div>
+<h3 class="text-xl font-bold">Configurações Planilha</h3>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Nome do consultor</label>
+  <input id="consultorName" class="w-full bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none" placeholder="Digite seu nome aqui..." type="text" required/>	
+
+</div>
+<div class="flex gap-8 grid grid-cols-2 md:grid-cols-3">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Telefone</label>
+<input value="Tel1" id="telInput" class=" h-12 bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Cliente</label>
+<input id="clientName" value="Nome_Cliente" class=" h-12 bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Consultor</label>
+<input id="consultor-field" value="CONSULTOR" class=" h-12 bg-black/40 border border-border-gray rounded-xl p-4 text-sm text-text-muted focus:ring-accent-orange focus:border-accent-orange transition-all outline-none" min="0" max="9" type="text" name="">
+</div>
+</div>
+<div class="text-[10px] text-text-muted font-medium uppercase tracking-tighter">
+    Deve ser respectivo a coluna na planilha
+  </div>
+
+</div>
+
+<!-- Feature Card 2: Delay Timer -->
+<div class="bg-widget-bg lg:col-span-2 border border-border-gray rounded-3xl p-8 flex flex-col justify-between" data-purpose="delay-widget">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-10 h-10 bg-accent-orange/10 flex items-center justify-center rounded-lg text-accent-orange">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold">Defina um delay</h3>
+</div>
+<div class="space-y-8">
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-text-muted font-bold uppercase tracking-widest">Intervalo Padrão</span>
+<span class="text-4xl font-bold text-accent-orange" id="delay-val">30s</span>
+</div>
+<input id="rangeInput" class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary-container" max="240" min="5" type="range" oninput="this.style.backgroundSize = ((this.value - this.min) / (this.max - this.min) * 100) + '% 100%'; document.getElementById('delay-val').innerText = this.value + 's'" value="30">
+
+<div class="flex justify-between text-[10px] font-bold text-text-muted">
+<span>5s</span>
+<span>240s</span>
+</div>
+</div>
+</div>
+<!-- Fechando o GRID -->
+</div>
+
+
+
+<button id="addDataBtn" class="mt-6 px-8 py-3 w-full bg-accent-orange hover:bg-accent-orange/90 text-white font-bold rounded-xl shadow-lg shadow-accent-orange/20 transition-all">
+            Iniciar Disparo 
+  </button>
+</section>
+<section id="control-bar" class="gap-4 hidden items-end pb-6 justify-center fixed inset-0">
+<button class="w-12 h-12 flex items-center justify-center bg-widget-bg/90 hover:bg-widget-bg border border-border-gray/40 rounded-lg">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#8efc85"><path d="M640-200q-33 0-56.5-23.5T560-280v-400q0-33 23.5-56.5T640-760q33 0 56.5 23.5T720-680v400q0 33-23.5 56.5T640-200Zm-320 0q-33 0-56.5-23.5T240-280v-400q0-33 23.5-56.5T320-760q33 0 56.5 23.5T400-680v400q0 33-23.5 56.5T320-200Z"/></svg>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-widget-bg/90 hover:bg-widget-bg border border-border-gray/40 rounded-lg">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff4242"><path d="M240-320v-320q0-33 23.5-56.5T320-720h320q33 0 56.5 23.5T720-640v320q0 33-23.5 56.5T640-240H320q-33 0-56.5-23.5T240-320Z"/></svg>
+</button>
+</section>
+
+  </div>
+</div>
+<!-- END: FeatureHighlights -->
+<!-- Play and Pause Feature
+
+<div class="fixed bottom-0 left-0 w-full h-20 bg-gradient-to-t from-widget-bg to-transparent pointer-events-none"></div>
+
+<section class="fixed bottom-4 left-1/2 -translate-x-1/2 flex gap-6">
+  <button class="w-12 h-12 border border-border-gray bg-widget-bg rounded-lg flex items-center justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff5f1f"><path d="M320-273v-414q0-17 12-28.5t28-11.5q5 0 10.5 1.5T381-721l326 207q9 6 13.5 15t4.5 19q0 10-4.5 19T707-446L381-239q-5 3-10.5 4.5T360-233q-16 0-28-11.5T320-273Z"/></svg>
+  </button>
+
+  <button class="w-12 h-12 border border-border-gray bg-widget-bg rounded-lg flex items-center justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff5f1f"><path d="M640-200q-33 0-56.5-23.5T560-280v-400q0-33 23.5-56.5T640-760q33 0 56.5 23.5T720-680v400q0 33-23.5 56.5T640-200Zm-320 0q-33 0-56.5-23.5T240-280v-400q0-33 23.5-56.5T320-760q33 0 56.5 23.5T400-680v400q0 33-23.5 56.5T320-200Z"/></svg>
+  </button>
+</section>
+
+ -->
+<!-- BEGIN: Footer -->
+<footer class="border-t border-border-gray py-12 px-6" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-1">
+  <h2 class="text-2xl font-extrabold tracking-tight">Kaybro</h2>
+<img src="./img/crownOfJesus.png" class="w-6 h-6" alt="">
+</div>
+<div>
+  <p class="text-sm text-text-muted max-w-xs leading-relaxed">
+         Eu sou o caminho, e a verdade, e a vida. Ninguém vem ao Pai senão por mim. 
+        </p>
+        <p class="text-[0.65rem] text-text-muted max-w-xs leading-relaxed">João 14:6</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-6 w-full md:w-auto">
+<span  class="text-[0.65rem] text-text-muted max-w-xs leading-relaxed">Desenvolvido por Rodrigo</span>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Scripts -->
+ <script type="module" src="./main.js"></script>
+
+
+
+
+ 
+<script data-purpose="file-interaction">
+    // Add simple drag & drop visual feedback
+    const dropZone = document.querySelector('[data-purpose="file-upload-container"] > div');
+    const fileInput = document.getElementById('fileInput');
+
+    fileInput.addEventListener('dragenter', () => {
+      dropZone.classList.add('border-accent-orange', 'bg-accent-orange/5');
+    });
+
+    fileInput.addEventListener('dragleave', () => {
+      dropZone.classList.remove('border-accent-orange', 'bg-accent-orange/5');
+    });
+
+    fileInput.addEventListener('drop', (e) => {
+      dropZone.classList.remove('border-accent-orange', 'bg-accent-orange/5');
+      // Logic for file handling would go here
+    });
+  </script>
+<!-- END: Scripts -->
+</body></html>
