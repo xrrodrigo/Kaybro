@@ -36,7 +36,7 @@ function readExcel(file) {
         )
 
  
-       const phoneIds = ['68f2ab563ac00563d3d89f3b', '68f2aa50a9adeacddcd788e7', '68f14a80b80cdbddfbcae72a', '68dec82104bb3a900d089d6d'];
+       const phoneIds = [SEU PHONE_ID];
        let currentIndex = 0;
 
          function getNextPhoneId() {
