@@ -21,7 +21,7 @@ params.append('startchat_dialog_id', '');
 params.append('startchat_opening_message', '');
 params.append('startchat_chat_name', req.body.chat_name);
         
-  const response = await fetch('https://s17.chatguru.app/startchat/add', {
+  const response = await fetch('https://{SEU_SERVIDOR}.chatguru.app/startchat/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
